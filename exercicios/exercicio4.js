@@ -1,13 +1,17 @@
+const input = require('readline-sync')
 
-var notaProva1 = 8;   
-var notaProva2 = 7;   
-var notaProva3 = 9;   
-var pesoProva1 = 2;  
-var pesoProva2 = 3;  
-var pesoProva3 = 5;   
+// peso das provas
+const p2 = 2
+const p3 = 3
+const p5 = 5
 
+var notaDisciplina1, notaDisciplina2, notaDisciplina3, mediaPoderada
 
-var mediaFinal = (notaProva1 * pesoProva1 + notaProva2 * pesoProva2 + notaProva3 * pesoProva3) / (pesoProva1 + pesoProva2 + pesoProva3);
+notaDisciplina1 = parseFloat(input.question('informe a nota da disciplina1: '))
+notaDisciplina2 = parseFloat(input.question('informe a nota da disciplina2: '))
+notaDisciplina3 = parseFloat(input.question('informe a nota da disciplina3: '))
 
+//regra
+mediaPoderada = (notaDisciplina1 * p2 + notaDisciplina2 * p3 + notaDisciplina3 * p5) / (p2 + p3 + p5)
 
-console.log("A média final do aluno é: " + mediaFinal);
+console.log(`A sua média ponderada é${mediaPoderada}`)
