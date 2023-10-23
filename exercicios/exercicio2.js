@@ -1,8 +1,10 @@
-var a, b
+const input = require('readline-sync')
 
-a = 8
-b = 5
+var n1, n2, result
 
-if(a > b){
-    console.log('b é maior')
-}
+n1 = parseInt(input.question('Informe um número? '))
+n2 = parseInt(input.question('Informe outro número? '))
+
+result = n1 - n2
+
+console.log(`O resultado é ${result}`)
